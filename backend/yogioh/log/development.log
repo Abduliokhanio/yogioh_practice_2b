@@ -1185,3 +1185,40 @@ Processing by CardsController#destroy as JSON
 Completed 204 No Content in 33ms (ActiveRecord: 10.7ms | Allocations: 2449)
 
 
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 14:57:01 -0500
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 10.3ms | ActiveRecord: 1.0ms | Allocations: 6265)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 14:57:22 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1350)
+
+
+Started DELETE "/cards/2" for 127.0.0.1 at 2020-10-13 14:57:26 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"2", "card"=>{}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (3.5ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (20.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 64ms (ActiveRecord: 24.2ms | Allocations: 3166)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 14:57:27 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1178)
+
+
