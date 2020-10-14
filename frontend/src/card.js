@@ -10,11 +10,11 @@ class Card{
         let cardDiv = document.getElementById('card-collection')
         
         let html = `
-                    <div id = "ind-card">
+                    <div id = "${this.id}">
                         <p>====================<p>
                             <img src=${this.pic_sm} alt=${this.title}>
                             <p>${this.title}</p>  
-                            <button onclick="editCard()" type="Edit button">Edit</button>
+                            <button onclick="editCard()" type="Edit button" id=${this.id}>Edit</button>
                             <button class= "delete-button" id=${this.id} onclick="deleteCard()" type="Delete button">Delete</button> 
                         <p>====================<p>
                     </div>

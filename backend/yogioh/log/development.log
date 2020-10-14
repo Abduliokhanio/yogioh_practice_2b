@@ -1222,3 +1222,696 @@ Processing by CardsController#index as */*
 Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1178)
 
 
+Started GET "/" for 127.0.0.1 at 2020-10-13 20:45:13 -0500
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 36.9ms | Allocations: 416)
+Completed 200 OK in 95ms (Views: 65.5ms | ActiveRecord: 0.0ms | Allocations: 2221)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-10-13 20:45:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:46:23 -0500
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 11.1ms | ActiveRecord: 2.0ms | Allocations: 6175)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:47:28 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1179)
+
+
+Started POST "/cards" for 127.0.0.1 at 2020-10-13 20:48:40 -0500
+Processing by CardsController#create as JSON
+  Parameters: {"title"=>"Tornado Dragon 2", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983840.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983840.jpg", "card"=>{"title"=>"Tornado Dragon 2", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983840.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983840.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[36mCard Create (3.2ms)[0m  [1m[32mINSERT INTO "cards" ("title", "pic_sm", "pic_lg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Tornado Dragon 2"], ["pic_sm", "https://storage.googleapis.com/ygoprodeck.com/pics_small/6983840.jpg"], ["pic_lg", "https://storage.googleapis.com/ygoprodeck.com/pics/6983840.jpg"], ["created_at", "2020-10-14 01:48:40.197787"], ["updated_at", "2020-10-14 01:48:40.197787"]]
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+Completed 201 Created in 80ms (Views: 2.8ms | ActiveRecord: 21.0ms | Allocations: 2859)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:48:43 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 1332)
+
+
+Started DELETE "/cards/10" for 127.0.0.1 at 2020-10-13 20:48:50 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"10", "card"=>{}}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (1.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 74ms (ActiveRecord: 21.8ms | Allocations: 3132)
+
+
+Started POST "/cards" for 127.0.0.1 at 2020-10-13 20:50:00 -0500
+Processing by CardsController#create as JSON
+  Parameters: {"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\"", "card"=>{"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[36mCard Create (1.2ms)[0m  [1m[32mINSERT INTO "cards" ("title", "pic_sm", "pic_lg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ancient Brain"], ["pic_sm", "\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\""], ["pic_lg", "\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""], ["created_at", "2020-10-14 01:50:00.162372"], ["updated_at", "2020-10-14 01:50:00.162372"]]
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+Completed 201 Created in 64ms (Views: 0.6ms | ActiveRecord: 12.8ms | Allocations: 2573)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:50:49 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 1334)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:55:47 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.4ms | Allocations: 1334)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:56:13 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 1332)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:57:12 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 1332)
+
+
+Started POST "/cards" for 127.0.0.1 at 2020-10-13 20:57:24 -0500
+Processing by CardsController#create as JSON
+  Parameters: {"title"=>"Ancient Brain", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983840.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983840.jpg", "card"=>{"title"=>"Ancient Brain", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983840.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983840.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[36mCard Create (1.6ms)[0m  [1m[32mINSERT INTO "cards" ("title", "pic_sm", "pic_lg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ancient Brain"], ["pic_sm", "https://storage.googleapis.com/ygoprodeck.com/pics_small/6983840.jpg"], ["pic_lg", "https://storage.googleapis.com/ygoprodeck.com/pics/6983840.jpg"], ["created_at", "2020-10-14 01:57:24.757787"], ["updated_at", "2020-10-14 01:57:24.757787"]]
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+Completed 201 Created in 50ms (Views: 0.6ms | ActiveRecord: 13.1ms | Allocations: 2569)
+
+
+Started DELETE "/cards/12" for 127.0.0.1 at 2020-10-13 20:57:27 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"12", "card"=>{}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (2.7ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 49ms (ActiveRecord: 14.1ms | Allocations: 2449)
+
+
+Started POST "/cards" for 127.0.0.1 at 2020-10-13 20:57:39 -0500
+Processing by CardsController#create as JSON
+  Parameters: {"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\"", "card"=>{"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[36mCard Create (3.4ms)[0m  [1m[32mINSERT INTO "cards" ("title", "pic_sm", "pic_lg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ancient Brain"], ["pic_sm", "\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\""], ["pic_lg", "\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""], ["created_at", "2020-10-14 01:57:39.915195"], ["updated_at", "2020-10-14 01:57:39.915195"]]
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+Completed 201 Created in 50ms (Views: 0.7ms | ActiveRecord: 14.0ms | Allocations: 2569)
+
+
+Started POST "/cards" for 127.0.0.1 at 2020-10-13 20:59:01 -0500
+Processing by CardsController#create as JSON
+  Parameters: {"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\"", "card"=>{"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[36mCard Create (2.1ms)[0m  [1m[32mINSERT INTO "cards" ("title", "pic_sm", "pic_lg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ancient Brain"], ["pic_sm", "\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\""], ["pic_lg", "\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""], ["created_at", "2020-10-14 01:59:01.886840"], ["updated_at", "2020-10-14 01:59:01.886840"]]
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+Completed 201 Created in 57ms (Views: 0.8ms | ActiveRecord: 13.3ms | Allocations: 2537)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:59:02 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 1675)
+
+
+Started POST "/cards" for 127.0.0.1 at 2020-10-13 20:59:10 -0500
+Processing by CardsController#create as JSON
+  Parameters: {"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\"", "card"=>{"title"=>"Ancient Brain", "pic_sm"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\"", "pic_lg"=>"\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[36mCard Create (1.1ms)[0m  [1m[32mINSERT INTO "cards" ("title", "pic_sm", "pic_lg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ancient Brain"], ["pic_sm", "\"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg\""], ["pic_lg", "\"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg\""], ["created_at", "2020-10-14 01:59:10.806136"], ["updated_at", "2020-10-14 01:59:10.806136"]]
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:20:in `create'
+Completed 201 Created in 51ms (Views: 0.9ms | ActiveRecord: 9.5ms | Allocations: 2569)
+
+
+Started DELETE "/cards/15" for 127.0.0.1 at 2020-10-13 20:59:12 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"15", "card"=>{}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (1.0ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 42ms (ActiveRecord: 13.3ms | Allocations: 2449)
+
+
+Started DELETE "/cards/13" for 127.0.0.1 at 2020-10-13 20:59:15 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"13", "card"=>{}}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (0.9ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 34ms (ActiveRecord: 11.0ms | Allocations: 2449)
+
+
+Started DELETE "/cards/11" for 127.0.0.1 at 2020-10-13 20:59:15 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"11", "card"=>{}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (1.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 38ms (ActiveRecord: 11.1ms | Allocations: 2449)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 20:59:17 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 1332)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:03:13 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 1332)
+
+
+Started DELETE "/cards/1" for 127.0.0.1 at 2020-10-13 21:03:30 -0500
+Processing by CardsController#destroy as JSON
+  Parameters: {"id"=>"1", "card"=>{}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[36mCard Destroy (1.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:38:in `destroy'
+Completed 204 No Content in 41ms (ActiveRecord: 12.1ms | Allocations: 2449)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:04:29 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.7ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:04:59 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:06:16 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:06:38 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:07:19 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.4ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:10:12 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:10:13 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:10:56 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:14:09 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:14:14 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:14:24 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:14:46 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:15:37 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:19:46 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:20:42 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:23:57 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:24:04 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:24:05 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 793)
+
+
+Started GET "/cards/14" for 127.0.0.1 at 2020-10-13 21:24:09 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:26:17 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:26:19 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 15ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:26:23 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:26:25 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:26:37 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:26:39 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:26:53 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:26:55 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:28:39 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:28:40 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:31:14 -0500
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 1159)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-10-13 21:31:18 -0500
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (Duration: 4.4ms | Allocations: 3456)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.3ms | Allocations: 690)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 28.5ms | Allocations: 5925)
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.0ms | Allocations: 7122)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:33:24 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:33:25 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:34:11 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:34:14 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:34:16 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:34:18 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 18ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:36:06 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:36:17 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:36:20 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 793)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:40:13 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:40:15 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started PATCH "/cards/8" for 127.0.0.1 at 2020-10-13 21:40:26 -0500
+Processing by CardsController#update as JSON
+  Parameters: {"title"=>"Tornado Dragon edit", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg", "id"=>"8", "card"=>{"title"=>"Tornado Dragon edit", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg"}}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[36mCard Update (1.8ms)[0m  [1m[33mUPDATE "cards" SET "title" = ?, "pic_sm" = ?, "pic_lg" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["title", "Tornado Dragon edit"], ["pic_sm", "https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg"], ["pic_lg", "https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg"], ["updated_at", "2020-10-14 02:40:26.595147"], ["id", 8]]
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[35m (18.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+Completed 200 OK in 65ms (Views: 1.5ms | ActiveRecord: 20.3ms | Allocations: 3242)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:40:43 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:45:59 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:46:00 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 793)
+
+
+Started PATCH "/cards/8" for 127.0.0.1 at 2020-10-13 21:46:05 -0500
+Processing by CardsController#update as JSON
+  Parameters: {"title"=>"Tornado Dragon", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg", "id"=>"8", "card"=>{"title"=>"Tornado Dragon", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg"}}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[36mCard Update (1.5ms)[0m  [1m[33mUPDATE "cards" SET "title" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["title", "Tornado Dragon"], ["updated_at", "2020-10-14 02:46:05.403281"], ["id", 8]]
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+Completed 200 OK in 63ms (Views: 0.9ms | ActiveRecord: 14.0ms | Allocations: 3184)
+
+
+Started GET "/cards" for 127.0.0.1 at 2020-10-13 21:50:36 -0500
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:50:38 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started PATCH "/cards/8" for 127.0.0.1 at 2020-10-13 21:50:43 -0500
+Processing by CardsController#update as JSON
+  Parameters: {"title"=>"Tornado Dragon edit", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg", "id"=>"8", "card"=>{"title"=>"Tornado Dragon edit", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg"}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[36mCard Update (1.0ms)[0m  [1m[33mUPDATE "cards" SET "title" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["title", "Tornado Dragon edit"], ["updated_at", "2020-10-14 02:50:43.110872"], ["id", 8]]
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+Completed 200 OK in 48ms (Views: 1.1ms | ActiveRecord: 11.1ms | Allocations: 3184)
+
+
+Started GET "/cards/8" for 127.0.0.1 at 2020-10-13 21:50:50 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started PATCH "/cards/8" for 127.0.0.1 at 2020-10-13 21:50:54 -0500
+Processing by CardsController#update as JSON
+  Parameters: {"title"=>"Tornado Dragon ", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg", "id"=>"8", "card"=>{"title"=>"Tornado Dragon ", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/6983839.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/6983839.jpg"}}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[36mCard Update (0.9ms)[0m  [1m[33mUPDATE "cards" SET "title" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["title", "Tornado Dragon "], ["updated_at", "2020-10-14 02:50:54.993572"], ["id", 8]]
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+Completed 200 OK in 43ms (Views: 0.7ms | ActiveRecord: 10.0ms | Allocations: 3180)
+
+
+Started GET "/cards/14" for 127.0.0.1 at 2020-10-13 21:51:01 -0500
+Processing by CardsController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started PATCH "/cards/14" for 127.0.0.1 at 2020-10-13 21:51:08 -0500
+Processing by CardsController#update as JSON
+  Parameters: {"title"=>"Ancient Brain edit", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg", "id"=>"14", "card"=>{"title"=>"Ancient Brain edit", "pic_sm"=>"https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg", "pic_lg"=>"https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg"}}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:44:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[36mCard Update (1.7ms)[0m  [1m[33mUPDATE "cards" SET "title" = ?, "pic_sm" = ?, "pic_lg" = ?, "updated_at" = ? WHERE "cards"."id" = ?[0m  [["title", "Ancient Brain edit"], ["pic_sm", "https://storage.googleapis.com/ygoprodeck.com/pics_small/42431843.jpg"], ["pic_lg", "https://storage.googleapis.com/ygoprodeck.com/pics/42431843.jpg"], ["updated_at", "2020-10-14 02:51:08.266454"], ["id", 14]]
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:29:in `update'
+Completed 200 OK in 63ms (Views: 0.6ms | ActiveRecord: 10.9ms | Allocations: 3188)
+
+
